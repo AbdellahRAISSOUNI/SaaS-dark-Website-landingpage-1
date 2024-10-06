@@ -27,7 +27,7 @@ export const Feature = ({
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
     };
-  }, []);
+  }, [offsetX, offsetY]);
   return (
     <div className="border border-white/30 px-5 py-10 text-center rounded-xl relative">
       <motion.div
