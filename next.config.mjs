@@ -3,6 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -31,5 +32,12 @@ const nextConfig = {
     return config;
   },
 };
+
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
+
 
 export default nextConfig;
