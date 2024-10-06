@@ -23,9 +23,11 @@ export const LogoTicker = () => {
   return (
     <div className="bg-black text-white py-[72px] sm:py-24">
       <div className="container">
+        /* eslint-disable react/no-unescaped-entities */
         <h2 className="text-xl text-center text-white/70">
           Trusted by the world&apos;s most innovative teams
-        </h2> {/* Fixed the unescaped quote */}
+        </h2>
+        /* eslint-enable react/no-unescaped-entities */
         <div className="flex overflow-hidden mt-9 relative before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 before:left-0 after:right-0 before:top-0 after:top-0 before:z-10 after:z-10 before:bg-[linear-gradient(to_right,#000,rgba(0,0,0,0))] after:bg-[linear-gradient(to_left,#000,rgba(0,0,0,0))]">
           <motion.div
             transition={{

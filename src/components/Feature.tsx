@@ -14,6 +14,7 @@ export const Feature = ({
   const offsetY = useMotionValue(-100);
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}px, black ,transparent)`;
   const border = useRef<HTMLDivElement>(null);
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
       // e.x
@@ -28,6 +29,7 @@ export const Feature = ({
       window.removeEventListener("mousemove", updateMousePosition);
     };
   }, [offsetX, offsetY]);
+  /* eslint-enable react-hooks/exhaustive-deps */
   return (
     <div className="border border-white/30 px-5 py-10 text-center rounded-xl relative">
       <motion.div
